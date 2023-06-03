@@ -1,0 +1,540 @@
+/* common ground */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.d-none {
+  display: none;
+}
+
+/* common ground */
+
+/* page0 */
+#page0 {
+  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.create-account-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2.8rem;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.account-info input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 3.7rem;
+  margin-bottom: 1.8rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.account-info input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  /* padding: 0.6rem; */
+}
+
+.form-check label {
+  font-size: 2rem;
+}
+
+/* page0 */
+
+/* page1 */
+
+#page1 {
+  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2.4rem;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.name,
+.id,
+.first-deposit {
+  width: 100%;
+}
+
+.name {
+  display: flex;
+}
+
+.name input,
+.id input,
+.first-deposit input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 3.7rem;
+  margin-bottom: 1.8rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.name input:focus,
+.id input:focus,
+.first-deposit input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border: 0;
+}
+
+.name input:first-of-type {
+  margin-right: 1.5rem;
+}
+
+.submit-button {
+  width: 100%;
+  box-sizing: border-box;
+  height: 3.5rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* page1 */
+
+/* page2 */
+#page2 {
+  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.user-top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4ba3a1;
+  padding: 2.4rem;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+}
+
+.user-info {
+  font-size: 1.6rem;
+  text-align: right;
+}
+
+.available-balance {
+  display: flex;
+  justify-content: space-between;
+  background-color: #dc3545;
+  padding: 1.5rem;
+  font-size: 2.4rem;
+}
+
+.available-balance-title,
+.available-balance-amount {
+  margin: 0;
+}
+
+.items {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+  box-sizing: border-box;
+}
+
+.withdrawal,
+.deposit,
+.comebacklater {
+  font-size: 16px;
+  background-color: #1e4e6d;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.withdrawal,
+.deposit {
+  width: 214px;
+  height: 130px;
+}
+
+.comebacklater {
+  width: 222px;
+  height: 169px;
+}
+
+.withdrawal,
+.deposit {
+  margin-right: 0.8rem;
+}
+
+.withdrawal h2 {
+  margin-bottom: 0.8rem;
+  margin-top: 0;
+}
+
+.deposit h2 {
+  margin-bottom: 0.8rem;
+  margin-top: 0;
+}
+
+.comebacklater h2 {
+  margin-bottom: 0.8rem;
+  margin-top: 0;
+}
+
+/* page2 */
+
+/* page3 */
+
+#page3 {
+  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.withdrawal-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0rem 1.6rem;
+  width: 53%;
+  text-align: center;
+  color: #fff;
+}
+
+.withdrawal-title {
+  color: #212529;
+  font-size: 1.6rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+}
+
+.withdrawal-amount-selector {
+  width: 100%;
+}
+
+.withdrawal-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+.withdrawal-section p {
+  color: #212529;
+  width: 9.8rem;
+  font-size: 1.4rem;
+  margin: 0.5rem 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.withdrawal-section input {
+  width: 65.3rem;
+  box-sizing: border-box;
+  text-align: right;
+  color: #495057;
+  padding: 0.4rem 0.8rem;
+  margin: 0 1.5rem;
+}
+
+.withdrawal-section input:focus {
+  box-shadow: rgba(0, 123, 255, 0.25) 0, 0, 0, 3.2px;
+}
+
+.total-amount {
+  font-size: 1.8rem;
+  background-color: #1a4567;
+  padding: 0.6rem;
+  margin: 1em;
+  border: double 5px white;
+  background: #1a4567;
+  color: white;
+}
+.total-amount p {
+  margin: 1rem;
+}
+
+.next-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  margin-bottom: 1.2rem;
+}
+
+.next-page button {
+  margin: 0 1.5rem;
+  width: 50%;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.go-back {
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #007bff;
+}
+
+.go-back:hover {
+  background-color: #007bff;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.next {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border: 0;
+}
+
+.next:hover {
+  background-color: #1566bb;
+  transition: 0.4s;
+}
+/* page3 */
+
+/* page4 */
+
+#page4 {
+  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.confirmation-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0rem 1.6rem;
+  width: 53%;
+  text-align: center;
+  color: #fff;
+}
+
+.confirmation-title {
+  color: #212529;
+  font-size: 1.6rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+}
+
+.confirmation-amount-money {
+  width: 60%;
+  background-color: #1a4567;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.confirmation-section {
+  width: 100%;
+}
+
+.confirmation-section p {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+  border: 2px solid #fff;
+  text-align: right;
+  padding: 1rem;
+}
+
+.confirm-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  margin: 1.6rem 0;
+}
+
+.confirm-button button {
+  margin: 0 1.5rem;
+  width: 50%;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.go-back-button {
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #007bff;
+}
+
+.go-back-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.confirm {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border: 0;
+}
+
+.confirm:hover {
+  background-color: #1566bb;
+  transition: 0.4s;
+}
+
+/* page4 */
+
+/* page5 */
+
+#page5 {
+  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.deposit-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0rem 1.6rem;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+}
+
+.deposit-title {
+  color: #212529;
+  font-size: 1.6rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.deposit-amount {
+  text-align: center;
+}
+
+.deposit-amount input {
+  width: 90%;
+  margin: 1.2rem;
+  padding: 1.3rem 1.5rem;
+}
+
+/* page5 */
+
+/* page6 */
+
+#page6 {
+  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.days-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0rem 1.6rem;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+}
+
+.days-title {
+  color: #212529;
+  font-size: 1.6rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.days-amount {
+  text-align: center;
+}
+
+.days-amount input {
+  width: 90%;
+  margin: 1.2rem;
+  padding: 1.3rem 1.5rem;
+}
+/* page6 */
