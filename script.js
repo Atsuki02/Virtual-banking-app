@@ -60,25 +60,25 @@ function initializeUserAccount() {
   config.bankPage.append(mainBankPage(userBankAccount));
 }
 
-function mainBankPage(userBandAccount) {
+function mainBankPage(userBankAccount) {
   const mainPage = document.createElement("div");
   mainPage.innerHTML = `
   <div id="page2">
         <div class="user-top">
           <div class="user-info">
-            <p class="user-name">Your Name: ${userBandAccount.getFullName()}</p>
+            <p class="user-name">Your Name: ${userBankAccount.getFullName()}</p>
             <p class="user-id">Your Back ID: ${getRandomInteger(
               1,
               10000000
             )}</p>
             <p class="user-deposit">Your First Deposit: $${
-              userBandAccount.initialDeposit
+              userBankAccount.initialDeposit
             }</p>
           </div>
           <div class="available-balance">
             <p class="available-balance-title">Available Balance</p>
             <p class="available-balance-amount">$${
-              userBandAccount.initialDeposit
+              userBankAccount.initialDeposit
             }</p>
           </div>
           <div class="items">
@@ -102,7 +102,7 @@ function mainBankPage(userBandAccount) {
   mainPage
     .querySelectorAll(".withdrawal")[0]
     .addEventListener("click", function () {
-      withdrawController();
+      withdrawController(userBankAccount);
     });
   mainPage
     .querySelectorAll(".deposit")[0]
@@ -128,27 +128,27 @@ function billInputSelector(title) {
           <div class="withdrawal-amount-selector">
             <div class="withdrawal-section">
               <p class="withdrawal-unit">$100</p>
-              <input type="number" name="100-dollar" value="5" />
+              <input type="number" class="bill-input" data-bill="100" name="100-dollar" value="0" />
             </div>
             <div class="withdrawal-section">
               <p class="withdrawal-unit">$50</p>
-              <input type="number" name="50-dollar" value="1" />
+              <input type="number" class="bill-input" data-bill="50" name="50-dollar" value="0" />
             </div>
             <div class="withdrawal-section">
               <p class="withdrawal-unit">$20</p>
-              <input type="number" name="20-dollar" value="2" />
+              <input type="number" class="bill-input" data-bill="20" name="20-dollar" value="0" />
             </div>
             <div class="withdrawal-section">
               <p class="withdrawal-unit">$10</p>
-              <input type="number" name="10-dollar" value="3" />
+              <input type="number" class="bill-input" data-bill="10" name="10-dollar" value="0" />
             </div>
             <div class="withdrawal-section">
               <p class="withdrawal-unit">$5</p>
-              <input type="number" name="5-dollar" value="1" />
+              <input type="number" class="bill-input" data-bill="5" name="5-dollar" value="0" />
             </div>
             <div class="withdrawal-section">
               <p class="withdrawal-unit">$1</p>
-              <input type="number" name="1-dollar" value="4" />
+              <input type="number" class="bill-input" data-bill="1" name="1-dollar" value="0" />
             </div>
           </div>
           <div class="total-amount">
@@ -164,22 +164,22 @@ function backNextBtn(backString, nextString) {
   let container = document.createElement("div");
   container.innerHTML = `
           <div class="next-page">
-            <button class="go-back">${backString}</button>
+            <button class="go-back back-btn">${backString}</button>
             <button class="next">${nextString}</button>
           </div>
   `;
   return container;
 }
 
-function withdrawController() {
+function withdrawController(userBankAccount) {
   displayNone(config.bankPage);
   displayBlock(config.sidePage);
   config.bankPage.innerHTML = "";
   config.sidePage.innerHTML = "";
-  config.sidePage.append(withdrawPage());
+  config.sidePage.append(withdrawPage(userBankAccount));
 }
 
-function withdrawPage() {
+function withdrawPage(userBankAccount) {
   let container = document.createElement("div");
   container.setAttribute("id", "page3");
   let withdrawContainer = document.createElement("div");
@@ -189,5 +189,38 @@ function withdrawPage() {
     billInputSelector("Please Enter The Withdrawal Amount")
   );
   withdrawContainer.append(backNextBtn("back", "next"));
+
+  let backBtn = withdrawContainer.querySelectorAll(".back-btn").item(0);
+  backBtn.addEventListener("click", function () {
+    displayNone(config.sidePage);
+    displayBlock(config.bankPage);
+    config.bankPage.append(mainBankPage(userBankAccount));
+  });
+
+  let billInputs = withdrawContainer.querySelectorAll(".bill-input");
+  for (let i = 0; i < billInputs.length; i++) {
+    billInputs[i].addEventListener("change", function () {
+      document.querySelector(".total-amount").innerHTML = `
+      $${billSummation(billInputs, "data-bill")}
+      `;
+    });
+  }
+
+  console.log(billInputs);
+
   return container;
+}
+
+function billSummation(inputElementNodeList, multiplierAttribute) {
+  let summation = 0;
+  for (let i = 0; i < inputElementNodeList.length; i++) {
+    let currEle = inputElementNodeList[i];
+    let value = parseInt(currEle.value);
+
+    if (currEle.hasAttribute(multiplierAttribute)) {
+      value *= parseInt(currEle.getAttribute(multiplierAttribute));
+    }
+    if (value > 0) summation += value;
+  }
+  return summation;
 }
