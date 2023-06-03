@@ -20,6 +20,10 @@ html {
   display: none;
 }
 
+.d-block {
+  display: block;
+}
+
 /* common ground */
 
 /* page0 */
