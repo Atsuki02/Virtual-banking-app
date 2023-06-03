@@ -9,7 +9,6 @@ function displayBlock(ele) {
 }
 
 const config = {
-  target: document.getElementById("target"),
   page0: document.getElementById("page0"),
   page1: document.getElementById("page1"),
   page2: document.getElementById("page2"),
@@ -57,8 +56,8 @@ function initializeUserAccount() {
     )
   );
   console.log(userBankAccount);
-  config.page0.classList.add("d-none");
-  config.target.append(mainBankPage(userBankAccount));
+  config.initialForm.classList.add("d-none");
+  config.bankPage.append(mainBankPage(userBankAccount));
 }
 
 function mainBankPage(userBandAccount) {
@@ -103,7 +102,7 @@ function mainBankPage(userBandAccount) {
   mainPage
     .querySelectorAll(".withdrawal")[0]
     .addEventListener("click", function () {
-      alert("deposit");
+      withdrawController();
     });
   mainPage
     .querySelectorAll(".deposit")[0]
@@ -122,7 +121,7 @@ function mainBankPage(userBandAccount) {
 function billInputSelector(title) {
   let container = document.createElement("div");
   container.innerHTML = `
-  <div class="withdrawal-page">
+        
           <div class="withdrawal-title">
             <h1 class="">${title}</h1>
           </div>
@@ -156,7 +155,7 @@ function billInputSelector(title) {
             <p>$0.00</p>
           </div>
           
-        </div>
+        
   `;
   return container;
 }
@@ -172,22 +171,23 @@ function backNextBtn(backString, nextString) {
   return container;
 }
 
-function withdrawPage() {
-  let withdrawContainer = document.createElement("div");
+function withdrawController() {
+  displayNone(config.bankPage);
+  displayBlock(config.sidePage);
+  config.bankPage.innerHTML = "";
+  config.sidePage.innerHTML = "";
+  config.sidePage.append(withdrawPage());
+}
 
+function withdrawPage() {
+  let container = document.createElement("div");
+  container.setAttribute("id", "page3");
+  let withdrawContainer = document.createElement("div");
+  withdrawContainer.classList.add("withdrawal-page");
+  container.append(withdrawContainer);
   withdrawContainer.append(
     billInputSelector("Please Enter The Withdrawal Amount")
   );
   withdrawContainer.append(backNextBtn("back", "next"));
-
-  return withdrawContainer;
-}
-
-// withdrawPage();
-
-function withdrawController() {
-  displayNone(config.bankPage);
-    displayBlock(config.sidePage);
-  const withdrawalPage = document.createElement("div");
-  withdrawalPage.innerHTML =
+  return container;
 }
