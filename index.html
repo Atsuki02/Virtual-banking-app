@@ -26,21 +26,21 @@
               type="text"
               name="userEmail"
               placeholder="Email"
-              value="sssssss@ssssss"
+              value=""
               required=""
             />
             <input
               type="text"
               name="userFirstName"
               placeholder="First name"
-              value="ssssssssssss"
+              value=""
               required=""
             />
             <input
               type="text"
               name="userLastName"
               placeholder="Last name"
-              value="ssssssssss"
+              value=""
               required=""
             />
           </div>
@@ -49,7 +49,7 @@
               type="number"
               name="userFirstDeposit"
               placeholder="Enter your first deposit"
-              value="5555"
+              value=""
               required=""
             />
           </div>
@@ -177,43 +177,47 @@
           </div>
           <div class="next-page">
             <button class="go-back back-btn">Go Back</button>
-            <button class="next">Next</button>
+            <button class="next next-btn">Next</button>
           </div>
         </div>
       </div> -->
     <!-- page3 -->
     <!-- page4 -->
     <!-- <div id="page4">
-        <div class="confirmation-page">
-          <div class="confirmation-title">
-            <h1 class="">The money you are going to take is ...</h1>
+      <div class="confirmation-page">
+        <div class="confirmation-title">
+          <h1 class="">The money you are going to take is ...</h1>
+        </div>
+        <div class="confirmation-amount-money">
+          <div class="confirmation-section">
+            <p class="confirmation-unit">5 × $100</p>
           </div>
-          <div class="confirmation-amount-money">
-            <div class="confirmation-section">
-              <p class="confirmation-unit">5 × $100</p>
-            </div>
-            <div class="confirmation-section">
-              <p class="confirmation-unit">1 × $50</p>
-            </div>
-            <div class="confirmation-section">
-              <p class="confirmation-unit">2 × $20</p>
-            </div>
-            <div class="confirmation-section">
-              <p class="confirmation-unit">1 × $5</p>
-            </div>
-            <div class="confirmation-section">
-              <p class="confirmation-unit">4 × $1</p>
-            </div>
-            <div class="confirmation-section">
-              <p class="confirmation-total">total: $599</p>
-            </div>
+          <div class="confirmation-section">
+            <p class="confirmation-unit">1 × $50</p>
           </div>
-          <div class="confirm-button">
-            <button class="go-back-button">Go Back</button>
-            <button class="confirm">Confirm</button>
+          <div class="confirmation-section">
+            <p class="confirmation-unit">2 × $20</p>
+          </div>
+          <div class="confirmation-section">
+            <p class="confirmation-unit">1 × $5</p>
+          </div>
+          <div class="confirmation-section">
+            <p class="confirmation-unit">4 × $1</p>
+          </div>
+          <div class="confirmation-section">
+            <p class="confirmation-total">total: $599</p>
           </div>
         </div>
-      </div> -->
+        <div class="available-amount">
+          <p class="available-amount-title">Total to be withdrawn:</p>
+          <p class="available-amount-total">$12,345</p>
+        </div>
+        <div class="confirm-button">
+          <button class="go-back-button">Go Back</button>
+          <button class="confirm">Confirm</button>
+        </div>
+      </div>
+    </div> -->
     <!-- page4 -->
     <!-- page5 -->
     <!-- <div id="page5">
@@ -229,7 +233,7 @@
             <button class="next">Next</button>
           </div>
         </div>
-      </div> -->
+      </div>  -->
     <!-- page5 -->
     <!-- page6 -->
     <!-- <div id="page6">
@@ -238,7 +242,7 @@
             <h1 class="">How many days will you be gone?</h1>
           </div>
           <div class="days-amount">
-            <input type="text" name="days" placeholder="4 days" />
+            <input id="days-gone" type="number" name="days" placeholder="0 days" />
           </div>
           <div class="next-page">
             <button class="go-back">Go Back</button>

@@ -436,6 +436,20 @@ html {
   border-radius: 0.25rem;
 }
 
+.available-amount {
+  display: flex;
+  justify-content: space-between;
+  background-color: #dc3545;
+  margin: 1.6rem;
+  padding: 1rem;
+  font-size: 2.4rem;
+}
+
+.available-amount-title,
+.available-amount-total {
+  margin: 0;
+}
+
 .go-back-button {
   color: #007bff;
   background-color: #fff;
